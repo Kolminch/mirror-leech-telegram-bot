@@ -93,7 +93,7 @@ status_dict = {}
 task_dict = {}
 rss_dict = {}
 
-BOT_TOKEN = environ.get("BOT_TOKEN", "7954439452:AAFDpu3rb398fbQRqwm2AJmKG5yrmrPBbQ0")
+BOT_TOKEN = environ.get("BOT_TOKEN", "")
 if len(BOT_TOKEN) == 0:
     log_error("BOT_TOKEN variable is missing! Exiting now")
     bot_loop.stop()
@@ -101,7 +101,7 @@ if len(BOT_TOKEN) == 0:
 
 BOT_ID = BOT_TOKEN.split(":", 1)[0]
 
-DATABASE_URL = environ.get("DATABASE_URL", "mongodb+srv://tester:tes.ter@cluster0.9tgw8th.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URL = environ.get("DATABASE_URL", "")
 if len(DATABASE_URL) == 0:
     DATABASE_URL = ""
 
@@ -169,7 +169,7 @@ run(
     shell=True,
 )
 
-OWNER_ID = environ.get("OWNER_ID", "5636224141")
+OWNER_ID = environ.get("OWNER_ID", "")
 if len(OWNER_ID) == 0:
     log_error("OWNER_ID variable is missing! Exiting now")
     bot_loop.stop()
@@ -177,7 +177,7 @@ if len(OWNER_ID) == 0:
 else:
     OWNER_ID = int(OWNER_ID)
 
-TELEGRAM_API = environ.get("TELEGRAM_API", "10755921")
+TELEGRAM_API = environ.get("TELEGRAM_API", "")
 if len(TELEGRAM_API) == 0:
     log_error("TELEGRAM_API variable is missing! Exiting now")
     bot_loop.stop()
@@ -185,7 +185,7 @@ if len(TELEGRAM_API) == 0:
 else:
     TELEGRAM_API = int(TELEGRAM_API)
 
-TELEGRAM_HASH = environ.get("TELEGRAM_HASH", "d5e49fd3637cba407f17807d31c77977")
+TELEGRAM_HASH = environ.get("TELEGRAM_HASH", "")
 if len(TELEGRAM_HASH) == 0:
     log_error("TELEGRAM_HASH variable is missing! Exiting now")
     bot_loop.stop()
@@ -385,10 +385,10 @@ MEDIA_GROUP = MEDIA_GROUP.lower() == "true"
 USER_TRANSMISSION = environ.get("USER_TRANSMISSION", "")
 USER_TRANSMISSION = USER_TRANSMISSION.lower() == "true" and IS_PREMIUM_USER
 
-BASE_URL_PORT = environ.get("BASE_URL_PORT", "45792")
+BASE_URL_PORT = environ.get("BASE_URL_PORT", "")
 BASE_URL_PORT = 80 if len(BASE_URL_PORT) == 0 else int(BASE_URL_PORT)
 
-BASE_URL = environ.get("BASE_URL", "http://157.90.169.229:45792").rstrip("/")
+BASE_URL = environ.get("BASE_URL", "").rstrip("/")
 if len(BASE_URL) == 0:
     log_warning("BASE_URL not provided!")
     BASE_URL = ""
