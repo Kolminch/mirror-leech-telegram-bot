@@ -385,10 +385,10 @@ MEDIA_GROUP = MEDIA_GROUP.lower() == "true"
 USER_TRANSMISSION = environ.get("USER_TRANSMISSION", "")
 USER_TRANSMISSION = USER_TRANSMISSION.lower() == "true" and IS_PREMIUM_USER
 
-BASE_URL_PORT = environ.get("BASE_URL_PORT", "")
+BASE_URL_PORT = environ.get("BASE_URL_PORT", "45792")
 BASE_URL_PORT = 80 if len(BASE_URL_PORT) == 0 else int(BASE_URL_PORT)
 
-BASE_URL = environ.get("BASE_URL", "").rstrip("/")
+BASE_URL = environ.get("BASE_URL", "http://157.90.169.229:45792").rstrip("/")
 if len(BASE_URL) == 0:
     log_warning("BASE_URL not provided!")
     BASE_URL = ""
