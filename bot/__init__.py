@@ -93,7 +93,7 @@ status_dict = {}
 task_dict = {}
 rss_dict = {}
 
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
+BOT_TOKEN = environ.get("BOT_TOKEN", "7954439452:AAFDpu3rb398fbQRqwm2AJmKG5yrmrPBbQ0")
 if len(BOT_TOKEN) == 0:
     log_error("BOT_TOKEN variable is missing! Exiting now")
     bot_loop.stop()
@@ -101,7 +101,7 @@ if len(BOT_TOKEN) == 0:
 
 BOT_ID = BOT_TOKEN.split(":", 1)[0]
 
-DATABASE_URL = environ.get("DATABASE_URL", "")
+DATABASE_URL = environ.get("DATABASE_URL", "mongodb+srv://Tessa:tessa33@cluster0.5ehmtqw.mongodb.net/?retryWrites=true&w=majority")
 if len(DATABASE_URL) == 0:
     DATABASE_URL = ""
 
@@ -169,7 +169,7 @@ run(
     shell=True,
 )
 
-OWNER_ID = environ.get("OWNER_ID", "")
+OWNER_ID = environ.get("OWNER_ID", "5636224141")
 if len(OWNER_ID) == 0:
     log_error("OWNER_ID variable is missing! Exiting now")
     bot_loop.stop()
@@ -177,7 +177,7 @@ if len(OWNER_ID) == 0:
 else:
     OWNER_ID = int(OWNER_ID)
 
-TELEGRAM_API = environ.get("TELEGRAM_API", "")
+TELEGRAM_API = environ.get("TELEGRAM_API", "10755921")
 if len(TELEGRAM_API) == 0:
     log_error("TELEGRAM_API variable is missing! Exiting now")
     bot_loop.stop()
@@ -185,7 +185,7 @@ if len(TELEGRAM_API) == 0:
 else:
     TELEGRAM_API = int(TELEGRAM_API)
 
-TELEGRAM_HASH = environ.get("TELEGRAM_HASH", "")
+TELEGRAM_HASH = environ.get("TELEGRAM_HASH", "d5e49fd3637cba407f17807d31c77977")
 if len(TELEGRAM_HASH) == 0:
     log_error("TELEGRAM_HASH variable is missing! Exiting now")
     bot_loop.stop()
