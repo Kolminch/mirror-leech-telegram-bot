@@ -1,6 +1,6 @@
 
 cp - git clone https://github.com/Kolminch/mirror-leech-telegram-bot mirrorbot/ && cd mirrorbot
-cp - python3 -m venv mltbenv
+cp - python3 -m venv Avaenv
 if venv not found
    pip install virtualenv
    On Windows:
