@@ -26,6 +26,8 @@ from subprocess import Popen, run
 from time import time
 from tzlocal import get_localzone
 from uvloop import install
+from aiohttp import web
+from bot.wabs import web_server
 
 # from faulthandler import enable as faulthandler_enable
 # faulthandler_enable()
@@ -203,6 +205,11 @@ if len(USER_SESSION_STRING) != 0:
             parse_mode=enums.ParseMode.HTML,
             max_concurrent_transmissions=10,
         ).start()
+        app = web.AppRunner(await web_server())
+        await app.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(app, bind_address, PORT).start()
+        await idle()
         IS_PREMIUM_USER = user.me.is_premium
     except:
         log_error("Failed to start client from USER_SESSION_STRING")
