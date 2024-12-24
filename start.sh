@@ -1,3 +1,3 @@
-source mltbenv/bin/activate
+source avaenv/bin/activate
 python3 update.py
 python3 -m bot
